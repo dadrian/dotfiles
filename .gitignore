@@ -1,0 +1,4 @@
+*.swp
+.ssh
+.vim
+.dotfiles/extras.sh
