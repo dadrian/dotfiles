@@ -23,17 +23,20 @@ bindkey 'OA' history-beginning-search-backward
 bindkey 'OB' history-beginning-search-forward
 
 # Set up constants
-source .dotfiles/_const.sh
+source $HOME/.dotfiles/_const.sh
 
 # Load everything else
-source .dotfiles/gcloud.sh
-source .dotfiles/golang.sh
-source .dotfiles/python.sh
-source .dotfiles/mactex.sh
-source .dotfiles/rust.sh
-source .dotfiles/z.sh
+source $HOME/.dotfiles/gcloud.sh
+source $HOME/.dotfiles/golang.sh
+source $HOME/.dotfiles/python.sh
+source $HOME/.dotfiles/mactex.sh
+source $HOME/.dotfiles/rust.sh
+source $HOME/.dotfiles/z.sh
 
 # Only load extras if it exists
 if [ -f .dotfiles/extras.sh ]; then
-  source .dotfiles/extras.sh
+  source $HOME/.dotfiles/extras.sh
 fi
+
+# added by travis gem
+[ -f /Users/dadrian/.travis/travis.sh ] && source /Users/dadrian/.travis/travis.sh
