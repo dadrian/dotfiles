@@ -31,6 +31,7 @@ source $HOME/.dotfiles/golang.sh
 source $HOME/.dotfiles/python.sh
 source $HOME/.dotfiles/mactex.sh
 source $HOME/.dotfiles/rust.sh
+source $HOME/.dotfiles/travis.sh
 source $HOME/.dotfiles/z.sh
 
 # Only load extras if it exists
@@ -38,5 +39,3 @@ if [ -f .dotfiles/extras.sh ]; then
   source $HOME/.dotfiles/extras.sh
 fi
 
-# added by travis gem
-[ -f /Users/dadrian/.travis/travis.sh ] && source /Users/dadrian/.travis/travis.sh
