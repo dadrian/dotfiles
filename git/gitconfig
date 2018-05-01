@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[user]
+	name = David Adrian
+	email = davidcadrian@gmail.com
+[credential]
+	helper = osxkeychain
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[core]
+	excludesfile = /Users/dadrian/.git/gitignore_global
