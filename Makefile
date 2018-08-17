@@ -1,6 +1,6 @@
-.PHONY: all clean dotfiles git ssh vim 
+.PHONY: all clean dotfiles git ssh vim slack-term
 
-all: dotfiles ssh vim
+all: dotfiles ssh vim git
 
 dotfiles:
 	ln -sfn $(CURDIR)/.zshrc $(HOME)/.zshrc
