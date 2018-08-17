@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 # oh-my-zsh
 export ZSH="/Users/$USER/.oh-my-zsh"
@@ -39,3 +39,5 @@ if [ -f .dotfiles/extras.sh ]; then
   source $HOME/.dotfiles/extras.sh
 fi
 
+# Force $HOME binaries to the top of $PATH
+export PATH=$HOME/bin:$HOME/.bin:$HOME/.dotfiles/bin:$PATH
