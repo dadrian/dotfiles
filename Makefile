@@ -19,5 +19,6 @@ clean:
 	rm -f $(HOME)/.zshrc
 	rm -f $(HOME)/.dotfiles
 	rm -f $(HOME)/.git
+	rm -f $(HOME)/.gitconfig
 	rm -f $(HOME)/.ssh
 	rm -f $(HOME)/.vim
