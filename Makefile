@@ -2,6 +2,11 @@
 
 all: dotfiles ssh vim git
 
+install-cloud-sql-proxy: $(HOME)/.bin/cloud_sql_proxy
+
+$(HOME)/.bin/cloud_sql_proxy:
+	./install/cloud_sql_proxy.sh
+
 dotfiles:
 	ln -sfn $(CURDIR)/.zshrc $(HOME)/.zshrc
 	ln -sfn $(CURDIR)/.dotfiles $(HOME)/.dotfiles
