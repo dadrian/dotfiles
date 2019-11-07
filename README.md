@@ -1,17 +1,14 @@
 dotfiles
 ========
 
-Use at your own risk. Made for a Mac.
+Don't use these.Don't use these.Don't use these.Don't use these.
 
 #### Install:
 
 ```console
-$ make
+$ make install
+$ # optional
+$ make osx
 ```
 
 This will create symlinks in your home directory back to this repository.
-
-#### `.vim` and `.ssh`
-
-These will be installed (symlinked) automatically if they exist in this
-repository.
