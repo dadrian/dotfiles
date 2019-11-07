@@ -4,7 +4,11 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 export ZSH="/Users/$USER/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git)
-source $ZSH/oh-my-zsh.sh
+if [ -f $ZSH/oh-my-zsh.sh ]; then
+  source $ZSH/oh-my-zsh.sh
+else
+  echo "Missing oh-my-zsh!"
+fi
 
 # Base Shell Configuration
 export LANG=en_US.UTF-8

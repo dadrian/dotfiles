@@ -1,2 +1,5 @@
 # Make z work
-. /usr/local/etc/profile.d/z.sh
+Z_PATH=/usr/local/etc/profile.d/z.sh 
+if [ -f $Z_PATH ] ; then
+  . /usr/local/etc/profile.d/z.sh
+fi
