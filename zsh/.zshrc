@@ -1,5 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 # oh-my-zsh
@@ -7,7 +5,6 @@ export ZSH="/Users/$USER/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-
 
 # Base Shell Configuration
 export LANG=en_US.UTF-8
@@ -40,4 +37,4 @@ if [ -f .dotfiles/extras.sh ]; then
 fi
 
 # Force $HOME binaries to the top of $PATH
-export PATH=$HOME/bin:$HOME/.bin:$HOME/.dotfiles/bin:$PATH
+export PATH=$HOME/bin:$HOME/.bin::$PATH

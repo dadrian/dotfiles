@@ -2,9 +2,13 @@
 [user]
 	name = David Adrian
 	email = davidcadrian@gmail.com
+
 [credential]
 	helper = osxkeychain
+
 [alias]
+	  recent = ! git reflog | grep 'checkout: moving from' | head -n 50 | egrep -oh ' \\S+$' | awk '!x[$0]++'
 	lg = log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
 [core]
-	excludesfile = /Users/dadrian/.git/gitignore_global
+	excludesfile = $HOME/.gitexcludes

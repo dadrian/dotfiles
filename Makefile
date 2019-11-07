@@ -1,29 +1,38 @@
-.PHONY: all clean dotfiles git ssh vim slack-term
+.PHONY: default
+default: help
 
-all: dotfiles ssh vim git
+.PHONY: dependencies
+dependencies:  ## Install dependencies for this script
+	@command -v stow >/dev/null 2>&1 || brew install stow 2>/dev/null || sudo apt-get install -y stow 2>/dev/null || sudo yum install -y stow 2>/dev/null || { echo >&2 "Please install GNU stow"; exit 1; }
 
-install-cloud-sql-proxy: $(HOME)/.bin/cloud_sql_proxy
+.PHONY: check-dependencies
+check-dependencies:
+	@command -v stow >/dev/null 2>&1 || { echo >&2 "Missing GNU stow"; exit 1; }
 
-$(HOME)/.bin/cloud_sql_proxy:
-	./install/cloud_sql_proxy.sh
+STOWABLE := alacritty dotfiles git ssh zsh
+.PHONY: $(STOWABLE)
+$(STOWABLE):
+	stow -t $$HOME -d $(shell pwd) $(STOW_ARGS) $@
 
-dotfiles:
-	ln -sfn $(CURDIR)/.zshrc $(HOME)/.zshrc
-	ln -sfn $(CURDIR)/.dotfiles $(HOME)/.dotfiles
+.PHONY: stow
+stow: $(STOWABLE)
 
-git:
-	if [ -d $(CURDIR)/git ]; then ln -sfn $(CURDIR)/git $(HOME)/.git; ln -sfn $(HOME)/.git/gitconfig $(HOME)/.gitconfig; fi
+.PHONY: unstow
+unstow: STOW_ARGS += -D
+unstow: $(STOWABLE)
+	
 
-ssh:
-	if [ -d $(CURDIR)/ssh ]; then ln -sfn $(CURDIR)/ssh $(HOME)/.ssh; fi
+.PHONY: link-bin
+link-bin:
+	ln -sni $$(pwd)/bin $$HOME/.bin
 
-vim:
-	if [ -d $(CURDIR)/vim ]; then ln -sfn $(CURDIR)/vim $(HOME)/.vim; fi
+.PHONY: unlink-bin
+unlink-bin:
+	@if [ $$HOME/.bin -ef $$(pwd)/bin ]; then rm $$HOME/.bin; fi
 
-clean:
-	rm -f $(HOME)/.zshrc
-	rm -f $(HOME)/.dotfiles
-	rm -f $(HOME)/.git
-	rm -f $(HOME)/.gitconfig
-	rm -f $(HOME)/.ssh
-	rm -f $(HOME)/.vim
+install: check-dependencies stow link-bin ## Install dotfiles
+uninstall: unlink-bin unstow ## Uninstall dotfiles
+
+.PHONY: help
+help: ## List tasks with documentation
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' "$(firstword $(MAKEFILE_LIST))" | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
