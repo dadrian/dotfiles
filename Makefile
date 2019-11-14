@@ -1,6 +1,9 @@
 .PHONY: default
 default: help
 
+all:
+	@echo $(OSFLAG)
+
 .PHONY: dependencies
 dependencies:  ## Install dependencies for this script
 	@command -v stow >/dev/null 2>&1 || brew install stow 2>/dev/null || sudo apt-get install -y stow 2>/dev/null || sudo yum install -y stow 2>/dev/null || { echo >&2 "Please install GNU stow"; exit 1; }
@@ -21,6 +24,15 @@ stow: $(STOWABLE)
 unstow: STOW_ARGS += -D
 unstow: $(STOWABLE)
 	
+VSCODE_SETTINGS :=
+ifeq ($(UNAME_S),Linux)
+	VSCODE_SETTINGS := $$HOME/.config/Code/User/settings.json
+endif
+ifeq ($(UNAME_S),Darwin)
+	VSCODE_SETTINGS := $$HOME/Library/Application\ Support/Code/User/settings.json
+endif
+
+
 
 .PHONY: link-bin
 link-bin:
