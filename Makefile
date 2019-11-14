@@ -1,8 +1,14 @@
 .PHONY: default
 default: help
 
-all:
-	@echo $(OSFLAG)
+UNAME_S := $(shell uname -s)
+VSCODE_SETTINGS :=
+ifeq ($(UNAME_S),Linux)
+	VSCODE_SETTINGS += $$HOME/.config/Code/User/settings.json
+endif
+ifeq ($(UNAME_S),Darwin)
+	VSCODE_SETTINGS += $$HOME/Library/Application\ Support/Code/User/settings.json
+endif
 
 .PHONY: dependencies
 dependencies:  ## Install dependencies for this script
@@ -24,15 +30,13 @@ stow: $(STOWABLE)
 unstow: STOW_ARGS += -D
 unstow: $(STOWABLE)
 	
-VSCODE_SETTINGS :=
-ifeq ($(UNAME_S),Linux)
-	VSCODE_SETTINGS := $$HOME/.config/Code/User/settings.json
-endif
-ifeq ($(UNAME_S),Darwin)
-	VSCODE_SETTINGS := $$HOME/Library/Application\ Support/Code/User/settings.json
-endif
+.PHONY: vscode
+vscode:
+	ln -sni $$(pwd)/vscode/user/settings.json $(VSCODE_SETTINGS)
 
-
+.PHONY: unvscode
+unvscode:
+	if [ $(VSCODE_SETTINGS) -ef $$(pwd)/vscode/user/settings.json ]; then rm $(VSCODE_SETTINGS); echo '{}' > $(VSCODE_SETTINGS); fi
 
 .PHONY: link-bin
 link-bin:
@@ -40,10 +44,10 @@ link-bin:
 
 .PHONY: unlink-bin
 unlink-bin:
-	@if [ $$HOME/.bin -ef $$(pwd)/bin ]; then rm $$HOME/.bin; fi
+	if [ $$HOME/.bin -ef $$(pwd)/bin ]; then rm $$HOME/.bin; fi
 
-install: check-dependencies stow link-bin ## Install dotfiles
-uninstall: unlink-bin unstow ## Uninstall dotfiles
+install: check-dependencies stow link-bin vscode ## Install dotfiles
+uninstall: unvscode unlink-bin unstow ## Uninstall dotfiles
 
 .PHONY: osx
 osx: ## Install OS X specific-things (not undoable)
