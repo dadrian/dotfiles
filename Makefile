@@ -33,6 +33,7 @@ unstow: $(STOWABLE)
 .PHONY: vscode
 vscode:
 	ln -sni $$(pwd)/vscode/user/settings.json $(VSCODE_SETTINGS)
+	cat ./vscode/extensions/extensions.txt | xargs -n1 code --install-extension
 
 .PHONY: unvscode
 unvscode:
