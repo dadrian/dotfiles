@@ -41,4 +41,4 @@ if [ -f .dotfiles/extras.sh ]; then
 fi
 
 # Force $HOME binaries to the top of $PATH
-export PATH=$HOME/bin:$HOME/.bin::$PATH
+export PATH=$HOME/bin:$HOME/.bin:$PATH
