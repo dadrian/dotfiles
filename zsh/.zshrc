@@ -32,6 +32,7 @@ source $HOME/.dotfiles/golang.sh
 source $HOME/.dotfiles/python.sh
 source $HOME/.dotfiles/mactex.sh
 source $HOME/.dotfiles/rust.sh
+source $HOME/.dotfiles/ssl-osx.sh
 source $HOME/.dotfiles/travis.sh
 source $HOME/.dotfiles/z.sh
 
