@@ -1,7 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-brew "openssh"
 brew "stow"
 cask "alacritty"
 cask "alfred"
