@@ -53,6 +53,7 @@ uninstall: unvscode unlink-bin unstow ## Uninstall dotfiles
 .PHONY: osx
 osx: ## Install OS X specific-things (not undoable)
 	brew bundle install --file=osx/Brewfile
+	cp osx/osx-ssh ssh/.ssh/config.d
 
 .PHONY: help
 help: ## List tasks with documentation
