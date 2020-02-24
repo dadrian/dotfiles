@@ -1,7 +1,7 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 # oh-my-zsh
-export ZSH="/Users/$USER/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git)
 if [ -f $ZSH/oh-my-zsh.sh ]; then
