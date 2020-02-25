@@ -55,6 +55,10 @@ osx: ## Install OS X specific-things (not undoable)
 	brew bundle install --file=osx/Brewfile
 	cp osx/osx-ssh ssh/.ssh/config.d
 
+.PHONY: linux
+linux: ## Install Linux-specific things
+	@echo 'Done'
+
 .PHONY: help
 help: ## List tasks with documentation
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' "$(firstword $(MAKEFILE_LIST))" | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
