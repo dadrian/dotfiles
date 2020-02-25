@@ -1,0 +1,4 @@
+window:
+  decorations: none
+  startup_mode: Windowed
+  gtk_theme_variant: dark
