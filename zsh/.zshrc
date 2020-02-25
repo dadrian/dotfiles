@@ -22,6 +22,7 @@ ulimit -n 8192
 # Better up arrow behavior
 bindkey 'OA' history-beginning-search-backward
 bindkey 'OB' history-beginning-search-forward
+bindkey '^R' history-incremental-search-backward
 
 # Set up constants
 source $HOME/.dotfiles/_const.sh
