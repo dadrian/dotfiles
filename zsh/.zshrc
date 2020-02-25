@@ -28,6 +28,7 @@ bindkey '^R' history-incremental-search-backward
 source $HOME/.dotfiles/_const.sh
 
 # Load everything else
+source $HOME/.dotfiles/editors.sh
 source $HOME/.dotfiles/gcloud.sh
 source $HOME/.dotfiles/golang.sh
 source $HOME/.dotfiles/python.sh
