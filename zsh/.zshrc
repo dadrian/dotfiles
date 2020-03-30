@@ -1,4 +1,5 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+export INCLUDE_PATH=/usr/local/include:/usr/include
 
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
