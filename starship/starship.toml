@@ -1,0 +1,7 @@
+# Disable the package module
+[package]
+disabled = true
+
+[git_status]
+stashed = ''
+untracked = ''

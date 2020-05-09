@@ -23,15 +23,23 @@ STOWABLE := alacritty dotfiles git ssh tmux zsh
 $(STOWABLE):
 	stow -t $$HOME -d $(shell pwd) $(STOW_ARGS) $@
 
+$$HOME/.config:
+	mkdir -p $@
+
+STOWABLE_DOT_CONFIG := starship
+.PHONY: $(STOWABLE_DOT_CONFIG)
+$(STOWABLE_DOT_CONFIG): | $$HOME/.config
+	stow -t $$HOME/.config -d $(shell pwd) $(STOW_ARGS) $@
+
 .PHONY: stow
-stow: $(STOWABLE)
+stow: $(STOWABLE) $(STOWABLE_DOT_CONFIG)
 
 .PHONY: unstow
 unstow: STOW_ARGS += -D
 unstow: $(STOWABLE)
-	
+
 .PHONY: vscode
-vscode:
+vscode: | $$HOME/.config
 	ln -sni $$(pwd)/vscode/user/settings.json $(VSCODE_SETTINGS)
 	cat ./vscode/extensions/extensions.txt | xargs -n1 code --install-extension
 

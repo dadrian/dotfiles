@@ -1,14 +1,28 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 export INCLUDE_PATH=/usr/local/include:/usr/include
 
+# starship
+function config_starship {
+  eval "$(starship init zsh)"
+}
+
 # oh-my-zsh
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-plugins=(git)
-if [ -f $ZSH/oh-my-zsh.sh ]; then
-  source $ZSH/oh-my-zsh.sh
+function config_oh_my_zsh {
+  export ZSH="$HOME/.oh-my-zsh"
+  ZSH_THEME="robbyrussell"
+  plugins=(git)
+  if [ -f $ZSH/oh-my-zsh.sh ]; then
+    source $ZSH/oh-my-zsh.sh
+  else
+    echo "Missing oh-my-zsh!"
+  fi
+}
+
+DADRIAN_STARSHIP=1
+if (( ${+DADRIAN_STARSHIP} )); then
+  config_starship
 else
-  echo "Missing oh-my-zsh!"
+  config_oh_my_zsh
 fi
 
 # Base Shell Configuration
@@ -47,3 +61,4 @@ fi
 
 # Force $HOME binaries to the top of $PATH
 export PATH=$HOME/bin:$HOME/.bin:$PATH
+
