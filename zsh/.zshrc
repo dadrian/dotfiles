@@ -18,7 +18,7 @@ function config_oh_my_zsh {
   fi
 }
 
-DADRIAN_STARSHIP=1
+#DADRIAN_STARSHIP=1
 if (( ${+DADRIAN_STARSHIP} )); then
   config_starship
 else
