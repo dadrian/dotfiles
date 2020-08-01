@@ -1,11 +1,11 @@
 window:
   decorations: none
-  startup_mode: Fullscreen
+  #startup_mode: Fullscreen
   gtk_theme_variant: dark
 font:
   normal:
-    family: FiraCode Nerd Font
+    family: Fira Code
   italic:
-    family: FiraCode Nerd Font
+    family: Fira Code
   bold:
-    family: FiraCode Nerd Font
+    family: Fira Code
