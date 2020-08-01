@@ -3,7 +3,24 @@ export INCLUDE_PATH=/usr/local/include:/usr/include
 
 # starship
 function config_starship {
+  config_ls_colors
   eval "$(starship init zsh)"
+}
+
+function config_ls_colors {
+  # Steal color configuration from oh-my-zsh if using Starship
+  export LSCOLORS="Gxfxcxdxbxegedabagacad"
+  if command diff --color . . &>/dev/null; then
+    alias diff='diff --color'
+  fi
+  if [[ "$OSTYPE" == (darwin|freebsd)* ]]; then
+    # this is a good alias, it works by default just using $LSCOLORS
+    ls -G . &>/dev/null && alias ls='ls -G'
+    ls --color -d . &>/dev/null && alias ls='ls --color=tty' || { ls -G . &>/dev/null && alias ls='ls -G' }
+
+    # Take advantage of $LS_COLORS for completion as well.
+    zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+  fi
 }
 
 # oh-my-zsh
@@ -18,9 +35,9 @@ function config_oh_my_zsh {
   fi
 }
 
-#DADRIAN_STARSHIP=1
+DADRIAN_STARSHIP=1
 if (( ${+DADRIAN_STARSHIP} )); then
-  config_starship
+  # Configuration has to happen at the end
 else
   config_oh_my_zsh
 fi
@@ -61,4 +78,8 @@ fi
 
 # Force $HOME binaries to the top of $PATH
 export PATH=$HOME/bin:$HOME/.bin:$PATH
+
+if (( ${+DADRIAN_STARSHIP} )); then
+  config_starship
+fi
 
