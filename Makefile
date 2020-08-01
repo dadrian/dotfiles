@@ -36,7 +36,7 @@ stow: $(STOWABLE) $(STOWABLE_DOT_CONFIG)
 
 .PHONY: unstow
 unstow: STOW_ARGS += -D
-unstow: $(STOWABLE)
+unstow: $(STOWABLE) $(STOWABLE_DOT_CONFIG)
 
 .PHONY: vscode
 vscode: | $$HOME/.config
