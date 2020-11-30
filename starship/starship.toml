@@ -5,3 +5,8 @@ disabled = true
 [git_status]
 stashed = ''
 untracked = ''
+
+# I don't like this in every directory. If it was only in AWS project
+# directories, I'd leave it enabled
+[aws]
+disabled = true
