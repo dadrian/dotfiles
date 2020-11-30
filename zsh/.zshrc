@@ -52,8 +52,8 @@ DADRIAN_SHELL_NAME=$(basename $SHELL)
 ulimit -n 8192
 
 # Better up arrow behavior
-bindkey 'OA' history-beginning-search-backward
-bindkey 'OB' history-beginning-search-forward
+bindkey '[A' history-beginning-search-backward
+bindkey '[B' history-beginning-search-forward
 bindkey '^R' history-incremental-search-backward
 
 # Set up constants
