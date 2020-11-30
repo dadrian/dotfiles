@@ -6,5 +6,7 @@
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "python.jediEnabled": false,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "python.languageServer": "Microsoft",
+    "python.defaultInterpreterPath": "/usr/bin/python3"
 }
