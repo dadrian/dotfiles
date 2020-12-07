@@ -59,8 +59,6 @@ brew "mas"
 brew "mysql"
 # Manage compile and link flags for libraries
 brew "pkg-config"
-# Interpreted, interactive, object-oriented programming language
-brew "python@2", link: false
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
 # Low-level access to audio, keyboard, mouse, joystick, and graphics

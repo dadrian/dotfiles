@@ -1,15 +1,6 @@
 .PHONY: default
 default: help
 
-UNAME_S := $(shell uname -s)
-VSCODE_SETTINGS :=
-ifeq ($(UNAME_S),Linux)
-	VSCODE_SETTINGS += $$HOME/.config/Code/User/settings.json
-endif
-ifeq ($(UNAME_S),Darwin)
-	VSCODE_SETTINGS += $$HOME/Library/Application\ Support/Code/User/settings.json
-endif
-
 .PHONY: dependencies
 dependencies:  ## Install dependencies for this script
 	@command -v stow >/dev/null 2>&1 || brew install stow 2>/dev/null || sudo apt-get install -y stow 2>/dev/null || sudo yum install -y stow 2>/dev/null || { echo >&2 "Please install GNU stow"; exit 1; }
@@ -40,7 +31,7 @@ unstow: $(STOWABLE) $(STOWABLE_DOT_CONFIG)
 
 .PHONY: vscode
 vscode: | $$HOME/.config
-	ln -sni $$(pwd)/vscode/user/settings.json $(VSCODE_SETTINGS)
+	./vscode/install.sh
 	cat ./vscode/extensions/extensions.txt | xargs -n1 code --install-extension
 
 .PHONY: unvscode
