@@ -25,17 +25,17 @@ function config_ls_colors {
 
 # oh-my-zsh
 function config_oh_my_zsh {
-  export ZSH="$HOME/.oh-my-zsh"
-  ZSH_THEME="robbyrussell"
-  plugins=(git)
-  if [ -f $ZSH/oh-my-zsh.sh ]; then
+  if [ -f $HOME/.oh-my-zsh/oh-my-zsh.sh ]; then
+    export ZSH="$HOME/.oh-my-zsh"
+    ZSH_THEME="robbyrussell"
+    plugins=(git)
     source $ZSH/oh-my-zsh.sh
   else
     echo "Missing oh-my-zsh!"
   fi
 }
 
-DADRIAN_STARSHIP=1
+#DADRIAN_STARSHIP=1
 if (( ${+DADRIAN_STARSHIP} )); then
   # Configuration has to happen at the end
 else
@@ -68,7 +68,6 @@ source $HOME/.dotfiles/python.sh
 source $HOME/.dotfiles/mactex.sh
 source $HOME/.dotfiles/rust.sh
 source $HOME/.dotfiles/ssl-osx.sh
-source $HOME/.dotfiles/travis.sh
 source $HOME/.dotfiles/z.sh
 
 # Only load extras if it exists

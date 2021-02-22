@@ -53,6 +53,7 @@ uninstall: unvscode unlink-bin unstow ## Uninstall dotfiles
 osx: ## Install OS X specific-things (not undoable)
 	brew bundle install --file=osx/Brewfile
 	cp osx/osx-ssh ssh/.ssh/config.d
+	defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
 .PHONY: linux
 linux: ## Install Linux-specific things

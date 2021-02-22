@@ -1,3 +1,6 @@
+# This is buggy and sometimes results in the last line of command output getting deleted
+add_newline = false
+
 # Disable the package module
 [package]
 disabled = true
