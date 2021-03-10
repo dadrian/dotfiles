@@ -35,7 +35,7 @@ function config_oh_my_zsh {
   fi
 }
 
-#DADRIAN_STARSHIP=1
+DADRIAN_STARSHIP=1
 if (( ${+DADRIAN_STARSHIP} )); then
   # Configuration has to happen at the end
 else
@@ -61,6 +61,7 @@ source $HOME/.dotfiles/_const.sh
 
 # Load everything else
 source $HOME/.dotfiles/editor.sh
+source $HOME/.dotfiles/fly.sh
 source $HOME/.dotfiles/gcloud.sh
 source $HOME/.dotfiles/golang.sh
 source $HOME/.dotfiles/java.sh
