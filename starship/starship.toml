@@ -13,3 +13,6 @@ untracked = ''
 # directories, I'd leave it enabled
 [aws]
 disabled = true
+
+[gcloud]
+disabled = true
