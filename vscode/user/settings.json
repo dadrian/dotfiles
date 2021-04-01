@@ -5,7 +5,6 @@
     "go.useLanguageServer": true,
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
-    "python.jediEnabled": false,
     "window.zoomLevel": 0,
     "python.languageServer": "Pylance",
     "python.defaultInterpreterPath": "/usr/bin/python3",
@@ -19,5 +18,25 @@
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
-    }
+    },
+    "workbench.colorTheme": "Naysayer88",
+    "workbench.colorCustomizations": {
+        "editorCursor.background": "#000000",
+        "editorCursor.foreground": "#97d9a5",
+        "editor.selectionBackground": "#fa879a",
+        "editor.selectionForeground": "#00000080"
+        //"editor.selectionForeground": "#bdb395F8"
+        //"editor.selectionForeground": "#ff0000"
+        //"editor.selectionForeground": "#828f88"
+        //"editor.rangeHighlightBackground": "#828f88",
+        //"editor.selectionHighlightBackground": "#fa869e",
+    },
+    "editor.lineNumbers": "off",
+    "editor.cursorStyle": "block",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
 }
