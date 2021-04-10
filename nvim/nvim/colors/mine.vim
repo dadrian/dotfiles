@@ -6,7 +6,7 @@
 "
 
 " First remove all existing highlighting.
-set background=light
+set background=dark
 hi clear
 if exists("syntax_on")
   syntax reset
@@ -14,7 +14,7 @@ endif
 
 " David edits
 " Green=#008000
-hi Normal ctermfg=Black ctermbg=Black guifg=#80845E guibg=#042328
+hi Normal ctermfg=White ctermbg=Black guifg=#80845E guibg=#042328
 hi Comment guifg=Green ctermfg=Green
 
 hi Constant term=bold gui=standout ctermfg=DarkRed guifg=Magenta

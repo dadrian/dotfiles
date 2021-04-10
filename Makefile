@@ -9,7 +9,7 @@ dependencies:  ## Install dependencies for this script
 check-dependencies:
 	@command -v stow >/dev/null 2>&1 || { echo >&2 "Missing GNU stow"; exit 1; }
 
-STOWABLE := alacritty dotfiles git ssh tmux zsh
+STOWABLE := alacritty dotfiles git ssh tmux vim zsh 
 .PHONY: $(STOWABLE)
 $(STOWABLE):
 	stow -t $$HOME -d $(shell pwd) $(STOW_ARGS) $@
@@ -17,7 +17,7 @@ $(STOWABLE):
 $$HOME/.config:
 	mkdir -p $@
 
-STOWABLE_DOT_CONFIG := starship
+STOWABLE_DOT_CONFIG := starship nvim
 .PHONY: $(STOWABLE_DOT_CONFIG)
 $(STOWABLE_DOT_CONFIG): | $$HOME/.config
 	stow -t $$HOME/.config -d $(shell pwd) $(STOW_ARGS) $@
