@@ -17,13 +17,14 @@ endif
 hi Normal ctermfg=White ctermbg=Black guifg=#80845E guibg=#042328
 hi Comment guifg=Green ctermfg=Green
 
-hi Constant term=bold gui=standout ctermfg=DarkRed guifg=Magenta
+hi Constant ctermfg=DarkRed guifg=#80A0A0
 hi Special term=bold gui=bold ctermfg=DarkMagenta guifg=Red guibg=grey95
-hi Statement term=bold cterm=bold ctermfg=Brown gui=bold guifg=#A7C1C7
-hi Identifier guifg=Red
-hi Ignore ctermfg=LightGrey guifg=grey90
-
-
+hi Statement term=bold cterm=bold gui=bold guifg=#B0C0D0
+" hi Keyword term=bold cterm=bold gui=bold guifg=#B0C0D0
+hi Identifier guifg=#80A0A0
+hi Function guifg=#80A0A0
+hi Type guifg=#80C090
+hi Ignore ctermfg=White guifg=Red
 
 " Groups used in the 'highlight' and 'guicursor' options default value.
 hi ErrorMsg term=standout ctermbg=DarkRed ctermfg=White guibg=Red guifg=White
@@ -54,6 +55,4 @@ hi DiffDelete term=bold ctermfg=Blue ctermbg=LightCyan gui=bold guifg=Blue guibg
 hi CursorLine term=underline cterm=underline guibg=grey80
 hi CursorColumn term=reverse ctermbg=grey guibg=grey80
 
-" Colors for syntax highlighting
-"
 " vim: sw=2
