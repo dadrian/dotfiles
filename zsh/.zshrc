@@ -60,6 +60,7 @@ bindkey '^R' history-incremental-search-backward
 source $HOME/.dotfiles/_const.sh
 
 # Load everything else
+source $HOME/.dotfiles/term.sh
 source $HOME/.dotfiles/editor.sh
 source $HOME/.dotfiles/fly.sh
 source $HOME/.dotfiles/gcloud.sh
