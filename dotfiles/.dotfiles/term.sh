@@ -4,6 +4,7 @@ function update_alacritty_terminfo {
     TERMINFO_URL="https://raw.githubusercontent.com/alacritty/alacritty/v$ALACRITTY_VERSION/extra/alacritty.info"
     curl -s $TERMINFO_URL > $F || echo "unable to fetch terminfo from $TERMINFO_URL"
     tic -xe alacritty,alacritty-direct $F
+    echo 'updated, restart alacritty for changes to take effect'
 }
 
 function update_tmux_terminfo {
@@ -13,6 +14,7 @@ function update_tmux_terminfo {
   echo "fetched a terminfo from the internet to $F.src"
   if read -q "REPLY?install?"; then
     tic -xe tmux-256color $F.src
+    echo 'updated, restart tmux server for changes to take effect'
   else
     echo ''
     echo 'aborted'
