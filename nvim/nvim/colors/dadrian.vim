@@ -40,19 +40,21 @@ hi Ignore ctermfg=White guifg=White
 
 " Cursor
 " This doesn't seem to work reliably
-hi Cursor gui=none guifg=inverse guibg=blue
-hi lCursor guibg=Black guifg=NONE
-hi CursorLine gui=none guifg=inverse guibg=inverse
+hi Cursor guibg=#B0D090
+hi link iCursor Cursor
+hi link rCursor Cursor
+hi CursorLine guifg=inverse guibg=inverse
 hi link CursorColumn CursorLine
 
 
-hi Visual term=reverse ctermbg=Blue guibg=Blue
+hi Visual term=reverse ctermbg=Blue guibg=Blue guifg=None
+hi Search term=reverse ctermbg=Yellow ctermfg=NONE guibg=Blue guifg=NONE
+hi IncSearch term=reverse cterm=reverse gui=reverse
 
 " Groups used in the 'highlight' and 'guicursor' options default value.
 "
 " I haven't gone through this section yet
 hi ErrorMsg term=standout ctermbg=DarkRed ctermfg=White guibg=Red guifg=White
-hi IncSearch term=reverse cterm=reverse gui=reverse
 hi ModeMsg term=bold cterm=bold gui=bold
 hi StatusLine term=reverse,bold cterm=reverse,bold gui=reverse,bold
 hi StatusLineNC term=reverse cterm=reverse gui=reverse
@@ -62,7 +64,6 @@ hi Directory term=bold ctermfg=DarkBlue guifg=Blue
 hi LineNr term=underline ctermfg=Brown guifg=Brown
 hi MoreMsg term=bold ctermfg=DarkGreen gui=bold guifg=SeaGreen
 hi Question term=standout ctermfg=DarkGreen gui=bold guifg=SeaGreen
-hi Search term=reverse ctermbg=Yellow ctermfg=NONE guibg=Yellow guifg=NONE
 hi SpecialKey term=bold ctermfg=DarkBlue guifg=Blue
 hi Title term=bold ctermfg=DarkMagenta gui=bold guifg=Magenta
 hi WarningMsg term=standout ctermfg=DarkRed guifg=Red

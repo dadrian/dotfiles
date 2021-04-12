@@ -3,7 +3,7 @@ function update_alacritty_terminfo {
     F=$(mktemp)
     TERMINFO_URL="https://raw.githubusercontent.com/alacritty/alacritty/v$ALACRITTY_VERSION/extra/alacritty.info"
     curl -s $TERMINFO_URL > $F || echo "unable to fetch terminfo from $TERMINFO_URL"
-    tic -xe alacritty,alacritty-direct $F
+    sudo tic -xe alacritty,alacritty-direct $F
     echo 'updated, restart alacritty for changes to take effect'
 }
 
