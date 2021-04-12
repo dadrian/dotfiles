@@ -13,7 +13,7 @@ if exists("syntax_on")
 endif
 
 " David edits
-hi Normal ctermfg=Brown ctermbg=DarkBlue guifg=#80845E guibg=#042328
+hi Normal ctermfg=Brown ctermbg=DarkBlue guifg=#BDB395 guibg=#042328
 hi NonText term=bold cterm=bold ctermfg=LightBlue ctermbg=DarkBlue gui=bold guifg=LightBlue guibg=#042328
 
 hi Comment guifg=Green ctermfg=Green
@@ -48,13 +48,13 @@ hi link CursorColumn CursorLine
 
 
 hi Visual term=reverse ctermbg=Blue guibg=Blue guifg=None
-hi Search term=reverse ctermbg=Yellow ctermfg=NONE guibg=Blue guifg=NONE
-hi IncSearch term=reverse cterm=reverse gui=reverse
+hi Search term=reverse ctermbg=LightMagenta ctermfg=None guibg=#fa879a guifg=Black
+hi link IncSearch Search
 
-" Groups used in the 'highlight' and 'guicursor' options default value.
-"
+hi Error term=standout ctermfg=White ctermbg=Red gui=underline guibg=None guifg=Red
+hi Todo term=standout ctermfg=Blue ctermbg=Yellow gui=underline guibg=None guifg=Yellow
+
 " I haven't gone through this section yet
-hi ErrorMsg term=standout ctermbg=DarkRed ctermfg=White guibg=Red guifg=White
 hi ModeMsg term=bold cterm=bold gui=bold
 hi StatusLine term=reverse,bold cterm=reverse,bold gui=reverse,bold
 hi StatusLineNC term=reverse cterm=reverse gui=reverse
