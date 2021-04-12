@@ -45,6 +45,9 @@ hi lCursor guibg=Black guifg=NONE
 hi CursorLine gui=none guifg=inverse guibg=inverse
 hi link CursorColumn CursorLine
 
+
+hi Visual term=reverse ctermbg=Blue guibg=Blue
+
 " Groups used in the 'highlight' and 'guicursor' options default value.
 "
 " I haven't gone through this section yet
@@ -54,7 +57,6 @@ hi ModeMsg term=bold cterm=bold gui=bold
 hi StatusLine term=reverse,bold cterm=reverse,bold gui=reverse,bold
 hi StatusLineNC term=reverse cterm=reverse gui=reverse
 hi VertSplit term=reverse cterm=reverse gui=reverse
-hi Visual term=reverse ctermbg=grey guibg=grey80
 hi DiffText term=reverse cterm=bold ctermbg=Red gui=bold guibg=Red
 hi Directory term=bold ctermfg=DarkBlue guifg=Blue
 hi LineNr term=underline ctermfg=Brown guifg=Brown
