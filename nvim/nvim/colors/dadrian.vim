@@ -46,13 +46,14 @@ hi link rCursor Cursor
 hi CursorLine guifg=inverse guibg=inverse
 hi link CursorColumn CursorLine
 
-
 hi Visual term=reverse ctermbg=Blue guibg=Blue guifg=None
 hi Search term=reverse ctermbg=LightMagenta ctermfg=None guibg=lightred guifg=Black
 hi link IncSearch Search
 
 hi Error term=standout ctermfg=White ctermbg=Red gui=underline guibg=None guifg=lightred
 hi Todo term=standout ctermfg=Blue ctermbg=Yellow gui=none guibg=None guifg=yellow
+
+hi MatchParen term=standout cterm=none ctermbg=cyan gui=none guibg=cyan
 
 " I haven't gone through this section yet
 hi ModeMsg term=bold cterm=bold gui=bold
