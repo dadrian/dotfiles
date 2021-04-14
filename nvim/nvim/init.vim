@@ -1,15 +1,14 @@
 " Neovim configuration
 
 " Configure and install Vim Plug
-let data_dir = stdpath('data') . '/site'
-if empty(glob(data_dir . '/autoload/plug.vim'))
+let data_dir = stdpath('data')
+if empty(glob(data_dir . '/site/autoload/plug.vim')) || !exists("g:plugs")
   " Vim Plug wants to be in the data directory
   if has('unix') || has('win32unix') || has('win64unix')
-    silent execute '!mkdir -p '.data_dir.'/autoload'
-    silent execute '!cp '.stdpath('config').'/_cache/plug.vim '.data_dir.'/autoload/plug.vim'
+    silent execute '!mkdir -p '.data_dir.'/site/autoload'
+    silent execute '!cp '.stdpath('config').'/_cache/plug.vim '.data_dir.'/site/autoload/plug.vim'
   else
-    "something with robocopy
-    "silent execute '!robocopy'.stdpath('config').'\_cache\plug.vim '.data_dir.'\autoload\plug.vim'
+    silent execute '!robocopy '.stdpath('config').'\_cache '.data_dir.'\site\autoload plug.vim'
   endif
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
