@@ -6,54 +6,53 @@
 "
 
 " First remove all existing highlighting.
-set background=light
+set background=dark
 hi clear
 if exists("syntax_on")
   syntax reset
 endif
 
 " David edits
-hi Normal ctermfg=Brown ctermbg=DarkBlue guifg=#BDB395 guibg=#042328
+hi Normal ctermfg=Brown ctermbg=DarkBlue guifg=#d1b897 guibg=#062626
 hi NonText term=bold cterm=bold ctermfg=LightBlue ctermbg=DarkBlue gui=bold guifg=LightBlue guibg=#042328
 
-hi Comment guifg=Green ctermfg=Green
+hi Comment guifg=#44b340 ctermfg=Green
 
-hi Constant term=None cterm=None ctermfg=LightGray gui=None guifg=#80A0A0
-hi String ctermfg=LightBlue guifg=#40B0B0
-hi Character ctermfg=LightBlue guifg=#40B0B0
-hi Number ctermfg=DarkBlue guifg=#B0A0E0
-hi Float ctermfg=DarkBlue guifg=#B0A0E0
-hi Boolean ctermfg=DarkBlue guifg=#B0A0E0
+hi Constant term=None cterm=None ctermfg=LightGray gui=None guifg=#7ad0c6
+hi String ctermfg=LightBlue guifg=#2ec09c
+hi Character ctermfg=LightBlue guifg=#2ec09c
+hi Number ctermfg=DarkBlue guifg=#7ad0c6
+hi Float ctermfg=DarkBlue guifg=#7ad0c6
+hi Boolean ctermfg=DarkBlue guifg=#b0a0f0
 
-hi Identifier guifg=#80A0A0
-hi Function guifg=#80A0A0
+hi Identifier guifg=#c1d1e3
+hi Function guifg=#FFFFFF
 
-hi Statement term=bold cterm=bold gui=bold guifg=#B0C0D0
+hi Statement term=bold cterm=bold gui=none guifg=#ffffff
 
 hi Special term=bold gui=bold ctermfg=DarkMagenta guifg=#C07010
 
-hi Type gui=None guifg=#80D090
+hi Type gui=None guifg=#8cde94
 
-hi PreProc gui=None term=None cterm=None ctermfg=LightGray guifg=#B0C0D0
+hi PreProc gui=None term=None cterm=None ctermfg=LightGray guifg=#8cde94
 
 hi Ignore ctermfg=White guifg=White
 
 " Cursor
 " This doesn't seem to work reliably
-hi Cursor guibg=#B0D090
+hi Cursor guibg=#8cde94
 hi link iCursor Cursor
 hi link rCursor Cursor
 hi CursorLine guifg=inverse guibg=inverse
 hi link CursorColumn CursorLine
 
-hi Visual term=reverse ctermbg=Blue guibg=Blue guifg=None
-hi Search term=reverse ctermbg=LightMagenta ctermfg=None guibg=lightred guifg=Black
+hi Visual term=reverse ctermbg=Blue guibg=#0000ff guifg=None
+hi Search term=reverse ctermbg=LightMagenta ctermfg=None guibg=#F9D9D9 guifg=#062626
 hi link IncSearch Search
+hi MatchParen term=standout cterm=standout guibg=#0b3335
 
-hi Error term=standout ctermfg=White ctermbg=Red gui=underline guibg=None guifg=lightred
-hi Todo term=standout ctermfg=Blue ctermbg=Yellow gui=none guibg=None guifg=yellow
-
-hi MatchParen term=standout cterm=none ctermbg=cyan gui=none guibg=cyan
+hi Error term=standout ctermfg=White ctermbg=Red gui=underline guibg=None guifg=#ff0000
+hi Todo term=standout ctermfg=Blue ctermbg=Yellow gui=none guibg=None guifg=#ffaa00
 
 " I haven't gone through this section yet
 hi ModeMsg term=bold cterm=bold gui=bold
