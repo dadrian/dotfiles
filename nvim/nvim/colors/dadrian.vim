@@ -14,7 +14,7 @@ endif
 
 " David edits
 hi Normal ctermfg=Brown ctermbg=DarkBlue guifg=#d1b897 guibg=#062626
-hi NonText term=bold cterm=bold ctermfg=LightBlue ctermbg=DarkBlue gui=bold guifg=LightBlue guibg=#042328
+hi NonText term=bold cterm=bold ctermfg=LightBlue ctermbg=DarkBlue gui=bold guifg=LightBlue guibg=#062626
 
 hi Comment guifg=#44b340 ctermfg=Green
 
@@ -53,6 +53,7 @@ hi MatchParen term=standout cterm=standout guibg=#0b3335
 
 hi Error term=standout ctermfg=White ctermbg=Red gui=underline guibg=None guifg=#ff0000
 hi Todo term=standout ctermfg=Blue ctermbg=Yellow gui=none guibg=None guifg=#ffaa00
+hi Directory term=bold ctermfg=DarkBlue guifg=#7ad0c6
 
 " I haven't gone through this section yet
 hi ModeMsg term=bold cterm=bold gui=bold
@@ -60,7 +61,6 @@ hi StatusLine term=reverse,bold cterm=reverse,bold gui=reverse,bold
 hi StatusLineNC term=reverse cterm=reverse gui=reverse
 hi VertSplit term=reverse cterm=reverse gui=reverse
 hi DiffText term=reverse cterm=bold ctermbg=Red gui=bold guibg=Red
-hi Directory term=bold ctermfg=DarkBlue guifg=Blue
 hi LineNr term=underline ctermfg=Brown guifg=Brown
 hi MoreMsg term=bold ctermfg=DarkGreen gui=bold guifg=SeaGreen
 hi Question term=standout ctermfg=DarkGreen gui=bold guifg=SeaGreen

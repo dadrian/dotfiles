@@ -2,7 +2,7 @@
 
 " Configure and install Vim Plug
 let data_dir = stdpath('data')
-if empty(glob(data_dir . '/site/autoload/plug.vim')) || !exists("g:plugs")
+if empty(glob(data_dir . '/site/autoload/plug.vim'))
   " Vim Plug wants to be in the data directory
   if has('unix') || has('win32unix') || has('win64unix')
     silent execute '!mkdir -p '.data_dir.'/site/autoload'
