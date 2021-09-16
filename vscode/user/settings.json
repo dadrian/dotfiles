@@ -5,9 +5,7 @@
     "go.useLanguageServer": true,
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
-    "window.zoomLevel": 0,
     "python.languageServer": "Pylance",
-    "python.defaultInterpreterPath": "/usr/bin/python3",
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
@@ -19,7 +17,6 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "workbench.colorTheme": "Naysayer88",
     "workbench.colorCustomizations": {
         "editorCursor.background": "#000000",
         "editorCursor.foreground": "#97d9a5",
@@ -33,10 +30,26 @@
     },
     "editor.lineNumbers": "off",
     "editor.cursorStyle": "block",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "workbench.colorTheme": "Naysayer88",
+    "go.toolsManagement.autoUpdate": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "go.lintTool": "golangci-lint",
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.suggest.snippetsPreventQuickSuggestions": false
+    },
+    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoClosingDelete": "never",
+    "editor.autoClosingBrackets": "never",
 }
