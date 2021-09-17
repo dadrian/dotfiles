@@ -55,8 +55,15 @@ hi Error term=standout ctermfg=White ctermbg=Red gui=underline guibg=None guifg=
 hi Todo term=standout ctermfg=Blue ctermbg=Yellow gui=none guibg=None guifg=#ffaa00
 hi Directory term=bold ctermfg=DarkBlue guifg=#7ad0c6
 
-" I haven't gone through this section yet
+" Color of the tabs
+hi TabLine cterm=none ctermfg=DarkBlue ctermbg=Brown gui=none guifg=#062626 guibg=#d1b897
+hi TabLineSel term=bold cterm=bold ctermfg=Brown ctermbg=DarkBlue gui=bold guibg=#062626 guifg=#d1b897
+hi TabLineFill ctermbg=Brown guibg=#d1b897
+
+" Insert / normal / etc mode message at the bottom line
 hi ModeMsg term=bold cterm=bold gui=bold
+
+" I haven't gone through this section yet
 hi StatusLine term=reverse,bold cterm=reverse,bold gui=reverse,bold
 hi StatusLineNC term=reverse cterm=reverse gui=reverse
 hi VertSplit term=reverse cterm=reverse gui=reverse
