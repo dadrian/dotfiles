@@ -35,7 +35,7 @@ function config_oh_my_zsh {
   fi
 }
 
-DADRIAN_STARSHIP=1
+#DADRIAN_STARSHIP=1
 if (( ${+DADRIAN_STARSHIP} )); then
   # Configuration has to happen at the end
 else
@@ -71,7 +71,7 @@ source $HOME/.dotfiles/mactex.sh
 source $HOME/.dotfiles/rust.sh
 source $HOME/.dotfiles/ssl-osx.sh
 source $HOME/.dotfiles/zig.sh
-source $HOME/.dotfiles/z.sh
+#source $HOME/.dotfiles/z.sh
 
 # Only load extras if it exists
 if [ -f .dotfiles/extras.sh ]; then
