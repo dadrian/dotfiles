@@ -52,4 +52,7 @@
     "editor.autoClosingQuotes": "never",
     "editor.autoClosingDelete": "never",
     "editor.autoClosingBrackets": "never",
+    "[go.tmpl]": {
+        "editor.insertSpaces": false,
+    }
 }
