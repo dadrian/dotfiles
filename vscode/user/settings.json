@@ -1,45 +1,38 @@
 {
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-    "go.formatTool": "goimports",
-    "go.useLanguageServer": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.pylintEnabled": false,
-    "python.languageServer": "Pylance",
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    },
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
     },
+    "editor.suggestSelection": "first",
+    "workbench.colorTheme": "Naysayer88",
     "workbench.colorCustomizations": {
+        "foreground": "#d1b897",
         "editorCursor.background": "#000000",
-        "editorCursor.foreground": "#97d9a5",
-        "editor.selectionBackground": "#fa879a",
-        "editor.selectionForeground": "#00000080"
-        //"editor.selectionForeground": "#bdb395F8"
-        //"editor.selectionForeground": "#ff0000"
-        //"editor.selectionForeground": "#828f88"
-        //"editor.rangeHighlightBackground": "#828f88",
-        //"editor.selectionHighlightBackground": "#fa869e",
+        "editorCursor.foreground": "#8cde94",
+        "editor.selectionForeground": "#00000000",
+        "editor.selectionBackground": "#0000FF",
+        "editor.background": "#062626",
+        "editor.findMatchHighlightBackground": "#63878a8e",
+        "editor.findMatchBackground": "#f9d9d9",
+        "editor.selectionHighlightBackground": "#63878a8e",
     },
     "editor.lineNumbers": "off",
     "editor.cursorStyle": "block",
+    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoClosingDelete": "never",
+    "editor.autoClosingBrackets": "never",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
-    "workbench.colorTheme": "Naysayer88",
-    "go.toolsManagement.autoUpdate": true,
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
     "go.lintTool": "golangci-lint",
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "go.toolsManagement.autoUpdate": true,
     "[go]": {
         "editor.insertSpaces": false,
         "editor.formatOnSave": true,
@@ -48,11 +41,17 @@
         },
         "editor.suggest.snippetsPreventQuickSuggestions": false
     },
-    "editor.autoClosingOvertype": "never",
-    "editor.autoClosingQuotes": "never",
-    "editor.autoClosingDelete": "never",
-    "editor.autoClosingBrackets": "never",
     "[go.tmpl]": {
         "editor.insertSpaces": false,
+    },
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.languageServer": "Pylance",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
     }
 }
