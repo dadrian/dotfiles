@@ -1,0 +1,21 @@
+{
+    "name": "dadrian-colors",
+    "displayName": "dadrian-colors",
+    "description": "Personal color theme for David Adrian, based on Naysayer88 and Jon Blow.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "dadrian",
+                "uiTheme": "vs-dark",
+                "path": "./themes/dadrian-color-theme.json"
+            }
+        ]
+    }
+}
