@@ -32,7 +32,7 @@ unstow: $(STOWABLE) $(STOWABLE_DOT_CONFIG)
 .PHONY: vscode
 vscode: | $$HOME/.config
 	./vscode/install.sh
-	cat ./vscode/extensions/extensions.txt | xargs -n1 code --install-extension
+	cat ./vscode/third-party/extensions.txt | xargs -n1 code --install-extension
 
 .PHONY: unvscode
 unvscode:

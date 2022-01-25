@@ -1,57 +1,88 @@
 #!/usr/bin/env python3
 import json
 
+INVISIBLE = '#ffffff00' # white with no opacity
+NONE = '#00000000'
 
 BROWN = '#d1b897'
+DARK_BROWN = '#80845e'
 DARK_GREEN = '#062626'
+TURQUOISE = '#40b0b0'
+
+LIGHT_GREEN = '#8cde94'
+BLACK = '#000000'
+
+BLUE = '#0000ff'
+BLUE_HIGHLIGHT = BLUE + '8e'
+VISUAL = BLUE
+VISUAL_HIGHLIGHT = BLUE_HIGHLIGHT
+
+PINK = '#f9d9d9'
+SEARCH = PINK
 
 BACKGROUND = DARK_GREEN
 FOREGROUND = BROWN
+TEXT = BROWN
+TRANSPARENT_TEXT = TEXT + '00'
+STRINGS = TURQUOISE
+
+HIGHLIGHT_GRAY = '#63878a8e'
+HIGHLIGHT_GRAY_LESS = '#63878a1a'
+
 
 theme = {
 	"name": "dadrian",
 	"type": "hc",
 	"colors": {
-		"activityBar.activeBackground": "#b59e7a65",
-		"activityBar.activeBorder": "#b59e7a",
-		"activityBar.background": "#042327",
-		"activityBar.border": "#0c141f",
-		"activityBar.foreground": "#d7dae0",
-		"activityBarBadge.background": "#b59e7a",
-		"activityBarBadge.foreground": "#000000",
-		"button.background": "#b59e7aa4",
-		"button.hoverBackground": "#b59e7a",
-		"checkbox.border": "#b59e7a",
-		"contrastBorder": "#b59e7a",
-		"debugExceptionWidget.border": "#b59e7a",
-		"debugToolBar.border": "#b59e7a",
-		"dropdown.background": "#2a343e",
-		"dropdown.border": "#b59e7a",
-		"dropdown.listBackground": "#042327",
-		"editor.background": DARK_GREEN,
-		"editor.findMatchBackground": "#f9d9d9",
-		"editor.findMatchHighlightBackground": "#63878a8e",
-		"editor.foreground": "#bdb395",
-		"editor.lineHighlightBackground": "#ffffff00",
-		"editor.lineHighlightBorder": "#ffffff00",
-		"editor.rangeHighlightBackground": "#0000ff",
-		"editor.selectionBackground": "#0000ff",
-		"editor.selectionForeground": "#00000000",
-		"editor.selectionHighlightBackground": "#63878a8e",
-		"editorBracketHighlight.foreground1": "#b59e7a",
-		"editorBracketHighlight.foreground2": "#b59e7a",
-		"editorBracketHighlight.foreground3": "#b59e7a",
-		"editorBracketHighlight.foreground4": "#b59e7a",
-		"editorBracketHighlight.foreground5": "#b59e7a",
-		"editorBracketHighlight.foreground6": "#b59e7a",
+		"activityBar.activeBackground": BACKGROUND,
+		"activityBar.activeBorder": FOREGROUND,
+		"activityBar.background": BACKGROUND,
+		"activityBar.border": FOREGROUND, # right side of activity bar
+		"activityBar.foreground": FOREGROUND, # icon color in activity bar
+		"activityBarBadge.background": FOREGROUND, # inverse
+		"activityBarBadge.foreground": BACKGROUND, # inverse
+		"button.background": DARK_BROWN,
+		"button.hoverBackground": BROWN,
+		"checkbox.border": DARK_BROWN,
+		"contrastBorder": DARK_BROWN,
+		"debugExceptionWidget.border": FOREGROUND,
+		"debugToolBar.border": FOREGROUND,
+		"dropdown.background": BACKGROUND,
+		"dropdown.border": FOREGROUND,
+		"dropdown.listBackground": BACKGROUND,
+		"editor.background": BACKGROUND,
+		"editor.foreground": FOREGROUND,
+		"editor.findMatchBackground": SEARCH,
+		"editor.findMatchHighlightBackground": HIGHLIGHT_GRAY,
+        "editor.findRangeHighlightBackground": VISUAL,
+        "editor.findMatchBorder": INVISIBLE,
+        "editor.findMatchHighlightBorder": INVISIBLE,
+        "editor.findRangeHighlightBorder": INVISIBLE,
+		"editor.lineHighlightBackground": INVISIBLE,
+		"editor.lineHighlightBorder": INVISIBLE,
+		"editor.selectionBackground": VISUAL,
+		"editor.selectionForeground": NONE,
+		"editor.selectionHighlightBackground": HIGHLIGHT_GRAY,
+        "editor.selectionHighlightBorder": INVISIBLE,
+		"editor.rangeHighlightBackground": HIGHLIGHT_GRAY,
+        "editor.rangeHighlightBorder": INVISIBLE,
+		"editorBracketHighlight.foreground1": TEXT,
+		"editorBracketHighlight.foreground2": TEXT,
+		"editorBracketHighlight.foreground3": TEXT,
+		"editorBracketHighlight.foreground4": TEXT,
+		"editorBracketHighlight.foreground5": TEXT,
+		"editorBracketHighlight.foreground6": TEXT,
 		"editorBracketHighlight.unexpectedBracket.foreground": "#ff0000",
-		"editorBracketMatch.background": "#b59e7a00",
-		"editorBracketMatch.border": "#b59e7a",
-		"editorCursor.background": "#000000",
-		"editorCursor.foreground": "#8cde94",
-		"editorGroup.border": "#b59e7a",
-		"editorGroup.dropBackground": "#63878a1a",
-		"editorGroupHeader.tabsBackground": "#042327",
+		"editorBracketMatch.background": TRANSPARENT_TEXT,
+		"editorBracketMatch.border": TEXT,
+		"editorCursor.background": BLACK,
+		"editorCursor.foreground": LIGHT_GREEN,
+		"editorGroup.border": FOREGROUND,
+		"editorGroup.dropBackground": HIGHLIGHT_GRAY_LESS,
+        "editorGroupHeader.border": FOREGROUND,
+		"editorGroupHeader.tabsBackground": BACKGROUND,
+		"editorGroupHeader.noTabsBackground": BACKGROUND,
+		"editorGroupHeader.noTabsBorder": FOREGROUND,
 		"editorLineNumber.activeForeground": "#b59e7a",
 		"editorLineNumber.foreground": "#b59e7a65",
 		"editorSuggestWidget.background": "#042327",
@@ -94,14 +125,15 @@ theme = {
 		"statusBar.debuggingBorder": "#b59e7a",
 		"statusBar.foreground": "#000000",
 		"statusBar.noFolderBackground": "#b59e7a",
-		"tab.activeBackground": "#b59e7a",
-		"tab.activeForeground": "#ffffff",
-		"tab.border": "#b59e7a",
+		"tab.activeBackground": FOREGROUND,
+		"tab.activeForeground": BACKGROUND,
+        "tab.activeBorder": FOREGROUND,
+		"tab.border": FOREGROUND,
 		"tab.hoverBackground": "#b59e7aa4",
-		"tab.inactiveBackground": "#042327",
-		"tab.inactiveForeground": "#cccccc",
-		"tab.unfocusedActiveBackground": "#b59e7a65",
-		"tab.unfocusedActiveForeground": "#cccccc94",
+		"tab.inactiveBackground": BACKGROUND,
+		"tab.inactiveForeground": FOREGROUND,
+		"tab.unfocusedActiveBackground": FOREGROUND + '65',
+		"tab.unfocusedActiveForeground": BACKGROUND,
 		"titleBar.activeBackground": "#052c31",
 		"titleBar.border": "#b59e7a",
 		"titleBar.inactiveBackground": "#0c141f",

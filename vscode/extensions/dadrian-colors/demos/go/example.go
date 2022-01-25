@@ -13,7 +13,7 @@ type MyStruct struct {
 }
 
 func myFunction() string {
-	return "Hello, world!"
+	return "Hello, world!\n"
 }
 
 func main() {

@@ -19,8 +19,8 @@ hi NonText term=bold cterm=bold ctermfg=LightBlue ctermbg=DarkBlue gui=bold guif
 hi Comment guifg=#44b340 ctermfg=Green
 
 hi Constant term=None cterm=None ctermfg=LightGray gui=None guifg=#7ad0c6
-hi String ctermfg=LightBlue guifg=#2ec09c
-hi Character ctermfg=LightBlue guifg=#2ec09c
+hi String ctermfg=LightBlue guifg=#40b0b0
+hi Character ctermfg=LightBlue guifg=#40b0b0
 hi Number ctermfg=DarkBlue guifg=#7ad0c6
 hi Float ctermfg=DarkBlue guifg=#7ad0c6
 hi Boolean ctermfg=DarkBlue guifg=#b0a0f0
