@@ -4,9 +4,10 @@ using namespace std;
 
 template<typename T>
 class MyTemplateClass {
-    private T* Object;
+public:
+    T* Object;
 
-    public void print();
+    void print();
 };
 
 template<typename T>
