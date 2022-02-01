@@ -22,6 +22,11 @@
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
     "go.toolsManagement.autoUpdate": true,
+    "workbench.colorTheme": "Naysayer88",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
     "[go]": {
         "editor.insertSpaces": false,
         "editor.formatOnSave": true,
@@ -31,7 +36,7 @@
         "editor.suggest.snippetsPreventQuickSuggestions": false
     },
     "[go.tmpl]": {
-        "editor.insertSpaces": false,
+        "editor.insertSpaces": false
     },
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
@@ -39,8 +44,23 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    }
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    "[typescriptreact]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoClosingDelete": "never",
+    "editor.autoClosingBrackets": "never",
+    "html.autoClosingTags": false,
+    "javascript.autoClosingTags": false,
+    "typescript.autoClosingTags": false
 }
