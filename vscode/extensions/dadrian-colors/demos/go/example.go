@@ -5,11 +5,13 @@ import (
 	"time"
 )
 
+// MyStruct is a struct that does things.
 type MyStruct struct {
-	String   string
-	Value    interface{}
-	Number   int
-	Unsigned uint64
+	String        string
+	Value         interface{}
+	Number        int
+	Unsigned      uint64 `json:"hello"`
+	ErrorVariable TypeDoesNotExist
 }
 
 func myFunction() string {
@@ -23,6 +25,9 @@ func main() {
 		Value:    time.Now(),
 		Number:   -678,
 		Unsigned: 0x345,
+	}
+	if len(s.String) > 10 {
+		fmt.Println('c')
 	}
 	fmt.Printf("%v\n", s)
 }
