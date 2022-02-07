@@ -200,7 +200,7 @@ theme = {
 				"variable",
 			],
 			"settings": {
-				"foreground": IDENTIFIER,
+				"foreground": TEXT,
 			}
 		},
 		{
