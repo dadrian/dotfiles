@@ -22,7 +22,7 @@
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
     "go.toolsManagement.autoUpdate": true,
-    "workbench.colorTheme": "Naysayer88",
+    "workbench.colorTheme": "dadrian",
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
