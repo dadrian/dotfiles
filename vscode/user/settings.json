@@ -8,13 +8,15 @@
         "**/.factorypath": true
     },
     "editor.suggestSelection": "first",
-    "workbench.colorTheme": "dadrian",
     "editor.lineNumbers": "off",
     "editor.cursorStyle": "block",
     "editor.autoClosingOvertype": "never",
     "editor.autoClosingQuotes": "never",
     "editor.autoClosingDelete": "never",
     "editor.autoClosingBrackets": "never",
+    "html.autoClosingTags": false,
+    "javascript.autoClosingTags": false,
+    "typescript.autoClosingTags": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
@@ -55,12 +57,5 @@
     "[typescriptreact]": {
         "editor.tabSize": 2,
         "editor.insertSpaces": true
-    },
-    "editor.autoClosingOvertype": "never",
-    "editor.autoClosingQuotes": "never",
-    "editor.autoClosingDelete": "never",
-    "editor.autoClosingBrackets": "never",
-    "html.autoClosingTags": false,
-    "javascript.autoClosingTags": false,
-    "typescript.autoClosingTags": false
+    }
 }
