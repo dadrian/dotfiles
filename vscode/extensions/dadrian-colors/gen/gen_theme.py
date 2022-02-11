@@ -25,7 +25,8 @@ FLOAT = LIGHT_BLUE
 
 ORANGE = '#c07010'
 
-RED = '#FF0000'
+
+RED = '#e83020'
 GREEN = '#009000'
 LIGHT_GREEN = '#8cde94'
 BLACK = '#000000'
@@ -61,6 +62,8 @@ COMMENT = GREEN
 CONSTANT = LIGHT_BLUE
 NUMBER = BRIGHT_BLUE
 ERROR = RED
+WEAK_ERROR = '#f48771'
+WARNING = ORANGE
 
 IDENTIFIER = OFF_WHITE
 FUNCTION = WHITE
@@ -76,6 +79,7 @@ theme = {
 	"name": "dadrian",
 	"type": "hc",
 	"colors": {
+		"errorForeground": ERROR,
 		"activityBar.activeBackground": BACKGROUND,
 		"activityBar.activeBorder": FOREGROUND,
 		"activityBar.background": BACKGROUND,
@@ -120,6 +124,7 @@ theme = {
 		"editorBracketMatch.border": TEXT,
 		"editorCursor.background": BLACK,
 		"editorCursor.foreground": LIGHT_GREEN,
+		"editorError.foreground": ERROR,
 		"editorGroup.border": FOREGROUND,
 		"editorGroup.dropBackground": HIGHLIGHT_GRAY_LESS,
         "editorGroupHeader.border": FOREGROUND,
@@ -141,9 +146,11 @@ theme = {
 		"editorSuggestWidget.highlightForeground": FOREGROUND,
 		"editorSuggestWidget.selectedBackground": FOREGROUND + '65',
 		"focusBorder": WHITE + '00',
-		"foreground": FOREGROUND,
+		"foreground": OFF_WHITE,
 		"input.background": DARK_GRAY, # Literal text box for inputs, e.g. Cmd-F
 		"input.border": FOREGROUND,
+		"list.errorForeground": ERROR,
+		"list.warningForeground": ORANGE,
 		"list.activeSelectionBackground": FOREGROUND,
         "list.activeSelectionForeground": BACKGROUND,
 		"list.dropBackground": "#63878a1a",
@@ -156,6 +163,7 @@ theme = {
 		"menu.foreground": OFF_WHITE,
 		"menu.selectionBackground": FOREGROUND + '65',
 		"panel.border": FOREGROUND,
+		"panelSectionHeader.foreground": WHITE,
 		"panelSection.dropBackground": BACKGROUND + '1a',
 		"panelTitle.activeForeground": LIGHT_BROWN,
 		"panelTitle.inactiveForeground": OFF_WHITE,
@@ -167,14 +175,14 @@ theme = {
 		"quickInputList.focusBackground": FOREGROUND + 'a4',
 		"scrollbarSlider.background": "#b59e7aa4",
 		"scrollbarSlider.hoverBackground": "#b59e7a",
-		"sideBar.background": "#042327",
-		"sideBar.dropBackground": "#63878a1a",
-		"sideBar.foreground": "#cccccc",
+		"sideBar.background": BACKGROUND,
+		"sideBar.foreground": OFF_WHITE,
+		"statusBar.border": FOREGROUND,
+		"sideBar.dropBackground": BACKGROUND + '1a',
 		"sideBarSectionHeader.background": "#b59e7a",
 		"sideBarSectionHeader.foreground": "#000000",
 		"sideBarTitle.foreground": "#bbbbbb",
 		"statusBar.background": "#b59e7a",
-		"statusBar.border": "#b59e7a",
 		"statusBar.debuggingBorder": "#b59e7a",
 		"statusBar.foreground": "#000000",
 		"statusBar.noFolderBackground": "#b59e7a",

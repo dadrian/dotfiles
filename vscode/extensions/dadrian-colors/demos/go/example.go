@@ -14,12 +14,12 @@ type MyStruct struct {
 	ErrorVariable TypeDoesNotExist
 }
 
-func myFunction() string {
+func MyFunction() string {
 	return "Hello, world!\n"
 }
 
 func main() {
-	fmt.Println(myFunction())
+	fmt.Println(MyFunction())
 	s := MyStruct{
 		String:   "a string",
 		Value:    time.Now(),
