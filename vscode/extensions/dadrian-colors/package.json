@@ -9,6 +9,11 @@
     "categories": [
         "Themes"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dadrian/dotfiles",
+        "directory": "vscode/extensions/dadrian-colors"
+    },
     "contributes": {
         "themes": [
             {

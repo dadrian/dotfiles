@@ -6,6 +6,8 @@ import (
 )
 
 // MyStruct is a struct that does things.
+//
+// TODO(dadrian)[2022-02-11]: This is a note.
 type MyStruct struct {
 	String        string
 	Value         interface{}

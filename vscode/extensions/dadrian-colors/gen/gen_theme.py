@@ -27,7 +27,7 @@ ORANGE = '#c07010'
 
 
 RED = '#e83020'
-GREEN = '#009000'
+GREEN = '#30C030'
 LIGHT_GREEN = '#8cde94'
 BLACK = '#000000'
 

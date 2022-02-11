@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// MyTemplateClass is a templated class.
 template<typename T>
 class MyTemplateClass {
 public:
