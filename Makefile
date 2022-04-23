@@ -9,7 +9,7 @@ dependencies:  ## Install dependencies for this script
 check-dependencies:
 	@command -v stow >/dev/null 2>&1 || { echo >&2 "Missing GNU stow"; exit 1; }
 
-STOWABLE := alacritty dotfiles git ssh tmux vim zsh 
+STOWABLE := alacritty dotfiles git ssh tmux vim zsh
 .PHONY: $(STOWABLE)
 $(STOWABLE):
 	stow -t $$HOME -d $(shell pwd) $(STOW_ARGS) $@
@@ -31,7 +31,7 @@ unstow: $(STOWABLE) $(STOWABLE_DOT_CONFIG)
 
 .PHONY: vscode
 vscode: | $$HOME/.config
-	./vscode/install.sh
+	bash ./vscode/install.sh
 	cat ./vscode/third-party/extensions.txt | xargs -n1 code --install-extension
 
 .PHONY: unvscode
