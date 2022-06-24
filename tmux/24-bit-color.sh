@@ -6,6 +6,9 @@
 #   The background escape sequence is ^[48;2;<r>;<g>;<b>m
 #   <r> <g> <b> range from 0 to 255 inclusive.
 #   The escape sequence ^[0m returns output to default
+#
+# This script will appear like a smooth rainbow if you 
+# support 24-bit color. Otherwise, it will appear banded.
 
 setBackgroundColor()
 {
