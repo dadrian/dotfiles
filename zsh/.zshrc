@@ -35,7 +35,7 @@ function config_oh_my_zsh {
   fi
 }
 
-#DADRIAN_STARSHIP=1
+DADRIAN_STARSHIP=1
 if (( ${+DADRIAN_STARSHIP} )); then
   # Configuration has to happen at the end
 else
@@ -54,7 +54,7 @@ ulimit -n 8192
 # Better up arrow behavior
 bindkey '[A' history-beginning-search-backward
 bindkey '[B' history-beginning-search-forward
-bindkey '^R' history-incremental-search-backward
+#bindkey '^R' history-incremental-search-backward
 
 # Set up constants
 source $HOME/.dotfiles/_const.sh

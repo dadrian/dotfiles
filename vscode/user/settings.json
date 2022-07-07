@@ -57,5 +57,6 @@
     "[typescriptreact]": {
         "editor.tabSize": 2,
         "editor.insertSpaces": true
-    }
+    },
+    "editor.fontFamily": "Menlo, Fira Code, Monaco, 'Courier New', monospace"
 }
