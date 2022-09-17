@@ -71,7 +71,6 @@ source $HOME/.dotfiles/mactex.sh
 source $HOME/.dotfiles/rust.sh
 source $HOME/.dotfiles/ssl-osx.sh
 source $HOME/.dotfiles/zig.sh
-#source $HOME/.dotfiles/z.sh
 
 # Only load extras if it exists
 if [ -f .dotfiles/extras.sh ]; then
