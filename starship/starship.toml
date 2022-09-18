@@ -16,3 +16,6 @@ disabled = true
 
 [gcloud]
 disabled = true
+
+[container]
+disabled = true

@@ -69,6 +69,7 @@ source $HOME/.dotfiles/java.sh
 source $HOME/.dotfiles/python.sh
 source $HOME/.dotfiles/mactex.sh
 source $HOME/.dotfiles/rust.sh
+source $HOME/.dotfiles/ssh.sh
 source $HOME/.dotfiles/ssl-osx.sh
 source $HOME/.dotfiles/zig.sh
 
@@ -83,4 +84,3 @@ export PATH=$HOME/bin:$HOME/.bin:$PATH
 if (( ${+DADRIAN_STARSHIP} )); then
   config_starship
 fi
-
