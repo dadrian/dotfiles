@@ -31,6 +31,7 @@ unstow: $(STOWABLE) $(STOWABLE_DOT_CONFIG)
 
 .PHONY: vscode
 vscode: | $$HOME/.config
+	@command -v xargs >/dev/null 2>&1 || { echo >&2 "Please install xargs"; exit 1; }
 	bash ./vscode/install.sh
 	cat ./vscode/third-party/extensions.txt | xargs -n1 code --install-extension
 
