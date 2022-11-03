@@ -3,8 +3,12 @@ export INCLUDE_PATH=/usr/local/include:/usr/include
 
 # starship
 function config_starship {
-  config_ls_colors
-  eval "$(starship init zsh)"
+  if ! command -v starship &>/dev/null; then
+    echo >&2 "Missing starship!"
+  else
+    config_ls_colors
+    eval "$(starship init zsh)"
+  fi
 }
 
 function config_ls_colors {
