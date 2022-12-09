@@ -1,0 +1,25 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+# Convert text between DOS, UNIX, and Mac formats
+brew "dos2unix"
+# Mac App Store command-line interface
+brew "mas"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Terminal multiplexer
+brew "tmux"
+cask "alacritty"
+cask "alfred"
+cask "caffeine"
+cask "choosy"
+cask "discord"
+cask "firefox"
+cask "font-fira-code"
+cask "google-chrome"
+cask "visual-studio-code"
+mas "1Password", id: 443987910
+mas "Pomo Timer", id: 1447569061
+mas "Slack", id: 803453959
