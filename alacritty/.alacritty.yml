@@ -1,7 +1,7 @@
 window:
   decorations: full
   #startup_mode: Fullscreen
-  gtk_theme_variant: dark
+  window.decorations_theme_variant: dark
 font:
   normal:
     family: Fira Code

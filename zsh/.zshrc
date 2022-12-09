@@ -1,12 +1,21 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 export INCLUDE_PATH=/usr/local/include:/usr/include
 
+if [ -d "/opt/homebrew/bin" ]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
+
+if [ -d "/usr/local/go/bin" ]; then
+  export PATH="/usr/local/go/bin:$PATH"
+fi
+
+
 # starship
 function config_starship {
+  config_ls_colors
   if ! command -v starship &>/dev/null; then
     echo >&2 "Missing starship!"
   else
-    config_ls_colors
     eval "$(starship init zsh)"
   fi
 }
