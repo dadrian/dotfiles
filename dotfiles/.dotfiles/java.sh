@@ -3,7 +3,7 @@ if [ -x /usr/libexec/java_home ]; then
   unset JAVA_HOME
   if /usr/libexec/java_home -v 1.8 > /dev/null 2>&1; then
     export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-  else
+  elif /usr/libexec/java_home > /dev/null 2>&1; then
     export JAVA_HOME=$(/usr/libexec/java_home)
   fi
 fi
