@@ -1,4 +1,4 @@
 ms-python.python
 golang.go
-rust-lang.rust
+rust-lang.rust-analyzer
 vscodevim.vim
