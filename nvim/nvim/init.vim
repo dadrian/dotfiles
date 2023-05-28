@@ -39,4 +39,9 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
+" Fix windows
+if has("win32")
+  source $VIMRUNTIME/mswin.vim
+  noremap <C-V> <C-V>
+end
 
