@@ -58,5 +58,5 @@
         "editor.tabSize": 2,
         "editor.insertSpaces": true
     },
-    "editor.fontFamily": "Menlo, Fira Code, Monaco, 'Courier New', monospace"
+    "editor.fontFamily": "Menlo, Fira Code, Monaco, Consolas, 'Courier New', monospace"
 }
