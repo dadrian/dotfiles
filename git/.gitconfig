@@ -12,3 +12,7 @@
 
 [core]
 	excludesfile = ~/.gitexcludes
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
