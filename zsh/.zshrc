@@ -9,6 +9,10 @@ if [ -d "/usr/local/go/bin" ]; then
   export PATH="/usr/local/go/bin:$PATH"
 fi
 
+if [ -d "$HOME/zig-toolchain" ]; then
+  export PATH="$HOME/zig-toolchain:$PATH"
+fi
+
 
 # starship
 function config_starship {

@@ -43,8 +43,13 @@
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "python.languageServer": "Pylance",
+    "[html]": {
+        "editor.tabSize": 2
+    },
     "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnType": true,
+	"formatting.provider": "black"
     },
     "[typescript]": {
         "editor.tabSize": 2,
