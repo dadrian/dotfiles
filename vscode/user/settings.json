@@ -24,6 +24,7 @@
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
     "go.toolsManagement.autoUpdate": true,
+    "go.testTimeout": "10s",
     "workbench.colorTheme": "dadrian",
     "notebook.cellToolbarLocation": {
         "default": "right",
@@ -33,15 +34,13 @@
         "editor.insertSpaces": false,
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true
+            "source.organizeImports": "explicit"
         },
         "editor.suggest.snippetsPreventQuickSuggestions": false
     },
     "[go.tmpl]": {
         "editor.insertSpaces": false
     },
-    "python.linting.flake8Enabled": true,
-    "python.linting.pylintEnabled": false,
     "python.languageServer": "Pylance",
     "[html]": {
         "editor.tabSize": 2
@@ -49,7 +48,6 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.python",
         "editor.formatOnType": true,
-	"formatting.provider": "black"
     },
     "[typescript]": {
         "editor.tabSize": 2,
@@ -63,5 +61,9 @@
         "editor.tabSize": 2,
         "editor.insertSpaces": true
     },
-    "editor.fontFamily": "Menlo, Fira Code, Monaco, Consolas, 'Courier New', monospace"
+    "editor.fontFamily": "Menlo, Fira Code, Monaco, Consolas, 'Courier New', monospace",
+    "zig.path": "",
+    "zig.zls.path": "",
+    "zig.initialSetupDone": true,
+    "cmake.showOptionsMovedNotification": false
 }
