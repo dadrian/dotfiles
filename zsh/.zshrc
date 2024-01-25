@@ -1,5 +1,5 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
-export INCLUDE_PATH=/usr/local/include:/usr/include
+export INCLUDE_PATH=/opt/homebrew/include:usr/local/include:/usr/include
 
 if [ -d "/opt/homebrew/bin" ]; then
   export PATH="/opt/homebrew/bin:$PATH"
