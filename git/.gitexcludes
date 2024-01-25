@@ -9,3 +9,5 @@
 .idea/tasks.xml
 .idea/shelf/*
 .idea/watcherTasks.xml
+
+zig-cache/
