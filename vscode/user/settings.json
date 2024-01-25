@@ -61,6 +61,10 @@
         "editor.tabSize": 2,
         "editor.insertSpaces": true
     },
+    "[zig]":{
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
     "editor.fontFamily": "Menlo, Fira Code, Monaco, Consolas, 'Courier New', monospace",
     "zig.path": "",
     "zig.zls.path": "",
