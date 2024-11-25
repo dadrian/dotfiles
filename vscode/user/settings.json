@@ -46,8 +46,7 @@
         "editor.tabSize": 2
     },
     "[python]": {
-        "editor.defaultFormatter": "ms-python.python",
-        "editor.formatOnType": true,
+        "editor.formatOnType": true
     },
     "[typescript]": {
         "editor.tabSize": 2,
@@ -63,11 +62,15 @@
     },
     "[zig]":{
         "editor.tabSize": 4,
-        "editor.insertSpaces": true
+        "editor.insertSpaces": true,
+        "editor.inlayHints.enabled": "offUnlessPressed"
     },
     "editor.fontFamily": "Menlo, Fira Code, Monaco, Consolas, 'Courier New', monospace",
     "zig.path": "",
-    "zig.zls.path": "",
+    "zig.zls.path": "/Users/dadrian/Library/Application Support/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
     "zig.initialSetupDone": true,
-    "cmake.showOptionsMovedNotification": false
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.configureOnOpen": false,
+    "python.venvPath": "env",
+    "cSpell.enabled": false
 }
