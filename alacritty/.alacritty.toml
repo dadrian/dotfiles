@@ -9,3 +9,5 @@ font:
     family: Fira Code
   bold:
     family: Fira Code
+env:
+  TERM: alacritty
