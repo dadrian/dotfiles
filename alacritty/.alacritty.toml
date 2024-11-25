@@ -1,13 +1,8 @@
-window:
-  decorations: full
-  #startup_mode: Fullscreen
-  window.decorations_theme_variant: dark
-font:
-  normal:
-    family: Fira Code
-  italic:
-    family: Fira Code
-  bold:
-    family: Fira Code
-env:
-  TERM: alacritty
+[window]
+decorations = "full"
+#startup_mode: Fullscreen
+decorations_theme_variant = "dark"
+[font]
+normal.family = "Fira Code"
+[env]
+TERM = "alacritty"
