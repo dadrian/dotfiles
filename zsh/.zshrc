@@ -1,14 +1,20 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 export INCLUDE_PATH=/opt/homebrew/include:usr/local/include:/usr/include
 
+# Brew Paths
 if [ -d "/opt/homebrew/bin" ]; then
   export PATH="/opt/homebrew/bin:$PATH"
 fi
+if [ -d "/opt/homebrew/sbin" ]; then
+  export PATH="/opt/homebrew/sbin:$PATH"
+fi
 
+# Go paths
 if [ -d "/usr/local/go/bin" ]; then
   export PATH="/usr/local/go/bin:$PATH"
 fi
 
+# Zig paths, although sometimes Zig is just in $PATH
 if [ -d "$HOME/zig-toolchain" ]; then
   export PATH="$HOME/zig-toolchain:$PATH"
 fi
