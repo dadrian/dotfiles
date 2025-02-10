@@ -9,9 +9,13 @@ dependencies:  ## Install dependencies for this script
 check-dependencies:
 	@command -v stow >/dev/null 2>&1 || { echo >&2 "Missing GNU stow"; exit 1; }
 
-STOWABLE := alacritty dotfiles git ssh tmux vim zsh
+STOWABLE := alacritty dotfiles git tmux vim zsh
 .PHONY: $(STOWABLE)
 $(STOWABLE):
+	stow -t $$HOME -d $(shell pwd) $(STOW_ARGS) $@
+
+.PHONY: ssh
+ssh:  ## Install SSH config, not installed by default
 	stow -t $$HOME -d $(shell pwd) $(STOW_ARGS) $@
 
 $$HOME/.config:
