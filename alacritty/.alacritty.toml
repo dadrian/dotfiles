@@ -6,3 +6,5 @@ decorations_theme_variant = "dark"
 normal.family = "Fira Code"
 [env]
 TERM = "alacritty"
+[terminal]
+shell = "/bin/zsh"
