@@ -14,17 +14,9 @@
     "editor.autoClosingQuotes": "never",
     "editor.autoClosingDelete": "never",
     "editor.autoClosingBrackets": "never",
-    "html.autoClosingTags": false,
-    "javascript.autoClosingTags": false,
-    "typescript.autoClosingTags": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
-    "go.lintTool": "golangci-lint",
-    "go.formatTool": "goimports",
-    "go.useLanguageServer": true,
-    "go.toolsManagement.autoUpdate": true,
-    "go.testTimeout": "10s",
     "workbench.colorTheme": "dadrian",
     "notebook.cellToolbarLocation": {
         "default": "right",
@@ -36,13 +28,17 @@
         "editor.codeActionsOnSave": {
             "source.organizeImports": "explicit"
         },
-        "editor.suggest.snippetsPreventQuickSuggestions": false
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "formatTool": "goimports",
+        "lintTool": "golangci-lint",
+        "testTimeout": "10s",
+        "useLanguageServer": true
     },
     "[go.tmpl]": {
         "editor.insertSpaces": false
     },
-    "python.languageServer": "Pylance",
     "[html]": {
+        "autoClosingTags": false,
         "editor.tabSize": 2
     },
     "[python]": {
@@ -53,10 +49,12 @@
         "editor.insertSpaces": true
     },
     "[javascript]": {
+        "autoClosingTags": false,
         "editor.tabSize": 2,
         "editor.insertSpaces": true
     },
     "[typescriptreact]": {
+        "autoClosingTags": false,
         "editor.tabSize": 2,
         "editor.insertSpaces": true
     },
