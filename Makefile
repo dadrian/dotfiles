@@ -60,6 +60,7 @@ osx: ## Install OS X specific-things (not undoable)
 	#cp osx/osx-ssh ssh/.ssh/config.d
 	defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 	defaults -currentHost write -g AppleFontSmoothing -int 0
+	defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
 .PHONY: linux
 linux: ## Install Linux-specific things
