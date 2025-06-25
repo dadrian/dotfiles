@@ -1,6 +1,13 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 export INCLUDE_PATH=/opt/homebrew/include:usr/local/include:/usr/include
 
+# Enable completion system
+autoload -Uz compinit
+compinit
+
+# Ensure Homebrew completions are included
+fpath+=("/opt/homebrew/share/zsh/site-functions")
+
 # Brew Paths
 if [ -d "/opt/homebrew/bin" ]; then
   export PATH="/opt/homebrew/bin:$PATH"
