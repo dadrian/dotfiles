@@ -1,9 +1,14 @@
 function update_alacritty_terminfo {
-    ALACRITTY_VERSION=$(alacritty --version | cut -d ' ' -f 2)
+    if command -v alacritty &>/dev/null; then
+        ALACRITTY_VERSION=$(alacritty --version | cut -d ' ' -f 2 )
+    else
+        ALACRITTY_VERSION="0.15.1"
+    fi
+    echo "Alacritty Version: ${ALACRITTY_VERSION}"
     F=$(mktemp)
     TERMINFO_URL="https://raw.githubusercontent.com/alacritty/alacritty/v$ALACRITTY_VERSION/extra/alacritty.info"
     curl -s $TERMINFO_URL > $F || echo "unable to fetch terminfo from $TERMINFO_URL"
-    sudo tic -xe alacritty,alacritty-direct $F
+    tic -xe alacritty,alacritty-direct $F
     echo 'updated, restart alacritty for changes to take effect'
 }
 
