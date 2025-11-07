@@ -37,8 +37,8 @@
     "[go.tmpl]": {
         "editor.insertSpaces": false
     },
+    "html.autoClosingTags": false,
     "[html]": {
-        "autoClosingTags": false,
         "editor.tabSize": 2
     },
     "[python]": {
@@ -70,5 +70,6 @@
     "cmake.showOptionsMovedNotification": false,
     "cmake.configureOnOpen": false,
     "python.venvPath": "env",
-    "cSpell.enabled": false
+    "cSpell.enabled": false,
+    "go.toolsManagement.autoUpdate": true,
 }
