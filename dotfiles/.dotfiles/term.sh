@@ -2,7 +2,7 @@ function update_alacritty_terminfo {
     if command -v alacritty &>/dev/null; then
         ALACRITTY_VERSION=$(alacritty --version | cut -d ' ' -f 2 )
     else
-        ALACRITTY_VERSION="0.15.1"
+        ALACRITTY_VERSION="0.16.1"
     fi
     echo "Alacritty Version: ${ALACRITTY_VERSION}"
     F=$(mktemp)

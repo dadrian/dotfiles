@@ -102,6 +102,7 @@ source $HOME/.dotfiles/rust.sh
 source $HOME/.dotfiles/ssh.sh
 source $HOME/.dotfiles/ssl-osx.sh
 source $HOME/.dotfiles/zig.sh
+source $HOME/.dotfiles/perl.sh
 
 # Only load extras if it exists
 if [ -f .dotfiles/extras.sh ]; then

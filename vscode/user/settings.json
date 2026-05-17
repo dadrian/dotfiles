@@ -22,6 +22,8 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
+    "bazel.buildifierExecutable": "buildifier",
+    "bazel.buildifierFixOnFormat": true,
     "[go]": {
         "editor.insertSpaces": false,
         "editor.formatOnSave": true,
@@ -44,6 +46,10 @@
     "[python]": {
         "editor.formatOnType": true
     },
+    "[starlark]": {
+        "editor.defaultFormatter": "BazelBuild.vscode-bazel",
+        "editor.formatOnSave": true
+    },
     "[typescript]": {
         "editor.tabSize": 2,
         "editor.insertSpaces": true
@@ -64,12 +70,15 @@
         "editor.inlayHints.enabled": "offUnlessPressed"
     },
     "editor.fontFamily": "Menlo, Fira Code, Monaco, Consolas, 'Courier New', monospace",
-    "zig.path": "",
-    "zig.zls.path": "/Users/dadrian/Library/Application Support/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
-    "zig.initialSetupDone": true,
     "cmake.showOptionsMovedNotification": false,
     "cmake.configureOnOpen": false,
     "python.venvPath": "env",
     "cSpell.enabled": false,
     "go.toolsManagement.autoUpdate": true,
+    "cSpell.userWords": [
+        "financialization",
+        "Thiel",
+        "Thiel’s"
+    ],
+    "zig.zls.enabled": "on"
 }
