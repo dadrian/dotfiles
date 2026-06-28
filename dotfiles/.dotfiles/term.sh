@@ -1,8 +1,13 @@
+ALACRITTY_APP_BIN_DIR="/Applications/Alacritty.app/Contents/MacOS"
+if ! command -v alacritty > /dev/null 2>&1 && [ -x "$ALACRITTY_APP_BIN_DIR/alacritty" ]; then
+  export PATH="${PATH:+$PATH:}$ALACRITTY_APP_BIN_DIR"
+fi
+
 function update_alacritty_terminfo {
     if command -v alacritty &>/dev/null; then
         ALACRITTY_VERSION=$(alacritty --version | cut -d ' ' -f 2 )
     else
-        ALACRITTY_VERSION="0.16.1"
+        ALACRITTY_VERSION="0.17.0"
     fi
     echo "Alacritty Version: ${ALACRITTY_VERSION}"
     F=$(mktemp)
