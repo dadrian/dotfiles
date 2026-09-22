@@ -183,7 +183,7 @@ theme = {
 		"statusBar.border": FOREGROUND,
 		"sideBar.dropBackground": BACKGROUND + '1a',
 		"sideBarSectionHeader.background": "#b59e7a",
-		"sideBarSectionHeader.foreground": "#000000",
+		"sideBarSectionHeader.foreground": OFF_WHITE,
 		"sideBarTitle.foreground": "#bbbbbb",
 		"statusBar.background": "#b59e7a",
 		"statusBar.debuggingBorder": "#b59e7a",
