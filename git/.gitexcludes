@@ -11,3 +11,5 @@
 .idea/watcherTasks.xml
 
 zig-cache/
+
+**/.claude/settings.local.json
